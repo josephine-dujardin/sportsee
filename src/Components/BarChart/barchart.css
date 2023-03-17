@@ -1,0 +1,57 @@
+.barchart-container {
+    background-color: #FBFBFB;
+    margin-left: 170px;
+    width: 850px;
+    padding: 40px;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 850px;
+    position: relative;
+    top: -25px;
+}
+
+.legend-text {
+    display: flex;
+}
+
+.dot-kcal, .dot-kg {
+    display: flex;
+    align-items: center;
+}
+
+.red-dot, .black-dot {
+    margin: 0px 20px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red-dot {
+    background-color: #E60000;
+}
+
+.black-dot {
+    background-color: #282D30;
+}
+
+.legend-text {
+    color: #74798C;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.barchart-title {
+    color: #20253A;
+    font-size: 15px;
+}
+
+.tooltip-text {
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+}

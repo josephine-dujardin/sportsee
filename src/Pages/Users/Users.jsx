@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import './users.css';
 import WelcomeText from '../../Components/WelcomeText';
 import SimpleBarChart from '../../Components/BarChart';
+import SimpleLineChart from '../../Components/LineChart';
 
 function User() {
 
@@ -56,6 +57,7 @@ function User() {
         <>
             <WelcomeText />
             <SimpleBarChart />
+            <SimpleLineChart />
         </>
     )
 }

@@ -6,6 +6,7 @@ import WelcomeText from '../../Components/WelcomeText';
 import SimpleBarChart from '../../Components/BarChart';
 import SimpleLineChart from '../../Components/LineChart';
 import SimpleRadarChart from '../../Components/RadarChart';
+import SimplePieChart from '../../Components/PieChart';
 
 function User() {
 
@@ -61,6 +62,7 @@ function User() {
             <div className='flex-div'>
                 <SimpleLineChart />
                 <SimpleRadarChart />
+                <SimplePieChart />
             </div>
         </>
     )

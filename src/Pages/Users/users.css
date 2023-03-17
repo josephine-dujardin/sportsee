@@ -6,3 +6,7 @@
 .h1 {
     margin: 0px;
 }
+
+.flex-div {
+    display: flex;
+}

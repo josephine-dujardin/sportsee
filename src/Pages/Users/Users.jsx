@@ -5,6 +5,7 @@ import './users.css';
 import WelcomeText from '../../Components/WelcomeText';
 import SimpleBarChart from '../../Components/BarChart';
 import SimpleLineChart from '../../Components/LineChart';
+import SimpleRadarChart from '../../Components/RadarChart';
 
 function User() {
 
@@ -57,7 +58,10 @@ function User() {
         <>
             <WelcomeText />
             <SimpleBarChart />
-            <SimpleLineChart />
+            <div className='flex-div'>
+                <SimpleLineChart />
+                <SimpleRadarChart />
+            </div>
         </>
     )
 }

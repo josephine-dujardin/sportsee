@@ -1,7 +1,7 @@
 .piechart-container {
     background-color: #FBFBFB;
     margin-left: 20px;
-    width: 290px;
+    width: 262px;
     border-radius: 5px;
     margin-bottom: 20px;
     display: flex;
@@ -13,8 +13,8 @@
     color: #20253A;
     font-size: 15px;
     position: absolute;
-    margin-left: 30px;
-    bottom: 45px;
+    margin-left: 40px;
+    bottom: 115px;
 }
 
 .div-score {

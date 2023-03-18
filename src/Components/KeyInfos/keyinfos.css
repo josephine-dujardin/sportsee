@@ -1,0 +1,26 @@
+.data-flex-div {
+    display: flex;
+    margin-bottom: 52px;
+    background-color: #FBFBFB;
+    padding: 30px 40px;
+}
+
+.calorie-data, .protein-data, .carbohydrate-data, .lipid-data {
+    color: #74798C;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calorie, .protein, .carbohydrate, .lipid {
+    color: #282D30;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.calorie-data>p, .protein-data>p, .carbohydrate-data>p, .lipid-data>p {
+    margin: 0;
+}

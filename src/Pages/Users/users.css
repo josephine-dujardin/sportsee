@@ -1,3 +1,9 @@
+.container {
+    max-width: 1440px;
+    min-width: 1000px;
+    margin: auto;
+}
+
 .global-div {
     display: flex;
 }
@@ -15,4 +21,23 @@
 
 .flex-div {
     display: flex;
+}
+
+/* Responsive 1024 per 780 px */
+@media screen and (max-width: 1280px) {
+    .global-div {
+        flex-direction: column;
+    }
+
+    .left-div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .User {
+        text-align: center;
+        margin-left: 0px;
+    }
 }

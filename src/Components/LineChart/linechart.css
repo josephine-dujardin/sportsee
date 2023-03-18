@@ -26,3 +26,10 @@
     margin-left: 24px;
     position: absolute;
 }
+
+/* Responsive 1024 per 780 px */
+@media screen and (max-width: 1280px) {
+    .linechart-container {
+        margin-left: 0px;
+    }
+}

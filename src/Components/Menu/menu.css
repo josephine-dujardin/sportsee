@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1500px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -60,4 +59,11 @@
 .text {
     width: 192px;
     transform: rotate(-0.25turn);
+}
+
+/* Responsive 1024 per 780 px */
+@media screen and (max-width: 1280px) {
+    .vertical_menu {
+        width: 90px;
+    }
 }

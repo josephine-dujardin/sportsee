@@ -1,7 +1,7 @@
 .barchart-container {
     background-color: #FBFBFB;
     margin-left: 170px;
-    width: 850px;
+    width: 746px;
     padding: 40px;
     margin-bottom: 20px;
 }
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 850px;
+    width: 746px;
     position: relative;
     top: -25px;
 }

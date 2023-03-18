@@ -41,11 +41,11 @@ export default function SimpleRadarChart() {
     return (
         <div className='radarchart-container'>
             <RadarChart
-                cx={150}
-                cy={150}
+                cx={130}
+                cy={130}
                 outerRadius={80}
-                width={300}
-                height={300}
+                width={262}
+                height={262}
                 data={data}
             >
                 <PolarGrid gridType="polygon"

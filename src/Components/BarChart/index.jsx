@@ -56,7 +56,7 @@ export default function SimpleBarChart() {
             </div>
           </div>
         </div>
-        <BarChart className='barChart' width={900} height={300} data={data.sessions} barGap={8} >
+        <BarChart className='barChart' width={746} height={230} data={data.sessions} barGap={8} >
           <CartesianGrid strokeDasharray="1 1" vertical={false} />
           <XAxis yAxisId="day" dataKey="day" tick={{ fontSize: 14 }} dy={15} stroke="1 1" />
           <YAxis yAxisId="kilogram" dataKey="kilogram" type="number" domain={['dataMin - 2', 'dataMax + 1']} tickCount="4" axisLine={false} orientation="right" tickLine={false} tick={{ fontSize: 14 }} dx={15} />

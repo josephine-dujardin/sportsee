@@ -1,10 +1,16 @@
+.global-div {
+    display: flex;
+}
+
+.right-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .User {
     margin-left: 170px;
     margin-top: 150px;
-}
-
-.h1 {
-    margin: 0px;
 }
 
 .flex-div {

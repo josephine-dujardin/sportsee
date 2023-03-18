@@ -1,7 +1,7 @@
 .linechart-container {
     background-color: #FF0000;
     margin-left: 170px;
-    width: 290px;
+    width: 262px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -23,6 +23,6 @@
 .line-legend {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 17px;
+    margin-left: 24px;
+    position: absolute;
 }

@@ -61,8 +61,8 @@ export default function SimpleLineChart() {
                     <h2 className='line-barchart-title'>Durée moyenne des sessions</h2>
                 </div>
                 <LineChart
-                    width={300}
-                    height={220}
+                    width={262}
+                    height={262}
                     data={data}
                     margin={{
                         top: 5,

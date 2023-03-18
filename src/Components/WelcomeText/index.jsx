@@ -25,7 +25,7 @@ function WelcomeText() {
 
     return (
         <div className="User">
-            <h1 className="h1">Bonjour <span className="user_name">{data.firstName}</span></h1>
+            <h1 className="user_title">Bonjour <span className="user_name">{data.firstName}</span></h1>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
     )

@@ -31,12 +31,12 @@ export default function SimplePieChart() {
             <div className='pie-legend'>
                 <h2 className='piechart-title'>Score</h2>
             </div>
-            <PieChart width={300} height={300} >
+            <PieChart width={262} height={262} >
                 <Pie
                     data={score}
                     dataKey="value"
                     innerRadius={70}
-                    outerRadius={85}
+                    outerRadius={82}
                     startAngle={90}
                 >{score.map((entry, index) =>
                     index === 0 ? (

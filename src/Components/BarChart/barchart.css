@@ -56,3 +56,10 @@
     font-size: 11px;
     font-weight: 600;
 }
+
+/* Responsive 1024 per 780 px */
+@media screen and (max-width: 1280px) {
+    .barchart-container {
+        margin-left: 0px;
+    }
+}

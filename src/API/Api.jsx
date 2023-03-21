@@ -1,5 +1,5 @@
 /**
- * Get User Infos
+ * Fetch User Infos
  * @param {string} id
  * @returns {object}
  */
@@ -22,7 +22,7 @@ export const getUserInfos = async (id) => {
 };
 
 /**
-* Retrieve user activity
+* Fetch User Activity
 * @param {string} id
 * @returns {Array}
 */
@@ -44,7 +44,7 @@ export const getUserActivity = async (id) => {
 };
 
 /**
- * Get User Performance
+ * Fetch User Performance
  * @param {string} id
  * @returns {object}
  */
@@ -66,7 +66,7 @@ export const getUserPerformance = async (id) => {
     }
 };
 /**
- * Get User Average Session
+ * Fetch User Average Session
  * @param {string} id
  * @returns {object}
  */

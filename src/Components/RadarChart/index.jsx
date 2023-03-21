@@ -5,6 +5,12 @@ import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
+/**
+ * Displays a simple radar chart
+ *
+ * @return {(JSX | null)}
+ */
+
 export default function SimpleRadarChart() {
 
     const [data, setData] = useState([]);

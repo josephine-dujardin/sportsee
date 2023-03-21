@@ -6,6 +6,12 @@ import bike from '../../assets/iconBike.svg'
 import DumbBell from '../../assets/iconDumbBell.svg'
 import './menu.css';
 
+/**
+ * Displays a menu
+ *
+ * @return {(JSX )}
+ */
+
 function Menu() {
 
     return (

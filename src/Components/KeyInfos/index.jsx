@@ -7,6 +7,12 @@ import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
+/**
+ * Displays user's key infos
+ *
+ * @return {(JSX | null)}
+ */
+
 function KeyInfos() {
 
     const [data, setData] = useState([]);
@@ -16,14 +22,12 @@ function KeyInfos() {
         const data = async () => {
             const request = await getData("USER_MAIN_DATA", id);
             if (!request) return alert('data error');
-            // console.log(request)
             setData(request.keyData);
         };
         data();
     }, [id]);
-    if (data.length === 0) return null;
 
-    // console.log(data)
+    if (data.length === 0) return null;
 
     return (
         <div className="key-data">

@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 import './home.css';
 
+/**
+ * Display homePage
+ *
+ * @return {JSX}
+ */
+
 function Home() {
     return (
         <div className="Home">

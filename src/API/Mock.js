@@ -265,7 +265,7 @@ const USER_PERFORMANCE = [
 
 
 /**
- * Get user infos
+ * Retrieve User Infos
  *
  * @param {number} id User id
  * @returns {object} Response
@@ -280,7 +280,7 @@ export const getUserInfos = async (id) => {
 };
 
 /**
- * Get user activity 
+ * Retrieve User Activity 
  *
  * @param {number} id User id
  * @returns {object} Response
@@ -295,7 +295,7 @@ export const getUserActivity = async (id) => {
 };
 
 /**
- * Get user average session 
+ * Retrieve User Average Session 
  *
  * @param {number} id User id
  * @returns {object} Response
@@ -310,7 +310,7 @@ export const getUserAverageSessions = async (id) => {
 };
 
 /**
- * Get user performance 
+ * Retrieve User Performance 
  *
  * @param {number} id User id
  * @returns {object} Response

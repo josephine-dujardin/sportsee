@@ -4,6 +4,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import PropTypes from 'prop-types';
+
+/**
+ * Displays a simple bar chart
+ *
+ * @return {(JSX | null)}
+ */
 
 export default function SimpleBarChart() {
 
@@ -14,14 +21,13 @@ export default function SimpleBarChart() {
     const data = async () => {
       const request = await getData("USER_ACTIVITY", id);
       if (!request) return alert('data error');
-      // console.log(request)
       setData(request);
     };
     data();
   }, [id]);
   if (data.length === 0) return null;
 
-  //format data.day
+  // add + 1 to day's value
   for (let i = 0; i < data.sessions.length; i++) {
     data.sessions[i].day = i + 1;
   }
@@ -38,6 +44,11 @@ export default function SimpleBarChart() {
     }
 
     return null;
+  };
+
+  CustomTooltip.propTypes = {
+    active: PropTypes.bool,
+    payload: PropTypes.array,
   };
 
   return (

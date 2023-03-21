@@ -5,6 +5,12 @@ import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
+/**
+ * Displays a simple pie chart
+ *
+ * @return {(JSX | null)}
+ */
+
 export default function SimplePieChart() {
 
     const [data, setData] = useState([]);

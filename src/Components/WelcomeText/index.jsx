@@ -3,6 +3,12 @@ import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
+/**
+ * Display user welcome text
+ *
+ * @return {(JSX | null)}
+ */
+
 function WelcomeText() {
 
     const [data, setData] = useState([]);
@@ -12,16 +18,11 @@ function WelcomeText() {
         const data = async () => {
             const request = await getData("USER_MAIN_DATA", id);
             if (!request) return alert('data error');
-            // console.log(request)
             setData(request.userInfos);
         };
         data();
     }, [id]);
     if (data.length === 0) return null;
-    //format data.day
-    for (let i = 0; i < data.length; i++) { data[i].firstName = i + 1; }
-
-    // console.log(data)
 
     return (
         <div className="User">

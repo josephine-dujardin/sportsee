@@ -4,6 +4,13 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
 import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import PropTypes from 'prop-types';
+
+/**
+ * Displays a simple line chart
+ *
+ * @return {(JSX | null)}
+ */
 
 export default function SimpleLineChart() {
 
@@ -53,6 +60,10 @@ export default function SimpleLineChart() {
         return null;
     };
 
+    CustomTooltip.propTypes = {
+        active: PropTypes.bool,
+        payload: PropTypes.array,
+    };
 
     return (
         <>

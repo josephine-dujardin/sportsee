@@ -265,11 +265,13 @@ const USER_PERFORMANCE = [
 
 
 /**
- * Retrieve User Infos
- *
- * @param {number} id User id
- * @returns {object} Response
- */
+* Retrieves the main information of a user.
+* @function
+* @async
+* @param {number} id - The user's identifier.
+* @returns {Promise<UserMainData>} The main information of the user.
+* @throws {Error} If an error occurs while retrieving the data.
+*/
 export const getUserInfos = async (id) => {
 	try {
 		const res = USER_MAIN_DATA.find((el) => el.id == id);// eslint-disable-line
@@ -280,10 +282,12 @@ export const getUserInfos = async (id) => {
 };
 
 /**
- * Retrieve User Activity 
- *
- * @param {number} id User id
- * @returns {object} Response
+ * Retrieves the activity of a user.
+ * @function
+ * @async
+ * @param {number} id - The user's identifier.
+ * @returns {Promise<UserActivity>} The activity of the user.
+ * @throws {Error} If an error occurs while retrieving the data.
  */
 export const getUserActivity = async (id) => {
 	try {
@@ -295,10 +299,12 @@ export const getUserActivity = async (id) => {
 };
 
 /**
- * Retrieve User Average Session 
- *
- * @param {number} id User id
- * @returns {object} Response
+ * Retrieves the average session duration of a user.
+ * @function
+ * @async
+ * @param {number} id - The user's identifier.
+ * @returns {Promise<UserAverageSessions>} The average session duration of the user.
+ * @throws {Error} If an error occurs while retrieving the data.
  */
 export const getUserAverageSessions = async (id) => {
 	try {
@@ -310,10 +316,12 @@ export const getUserAverageSessions = async (id) => {
 };
 
 /**
- * Retrieve User Performance 
- *
- * @param {number} id User id
- * @returns {object} Response
+ * Retrieves the performance of a user.
+ * @function
+ * @async
+ * @param {number} id - The user's identifier.
+ * @returns {Promise<UserPerformance>} The performance of the user.
+ * @throws {Error} If an error occurs while retrieving the data.
  */
 export const getUserPerformance = async (id) => {
 	try {

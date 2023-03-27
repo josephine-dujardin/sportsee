@@ -6,20 +6,32 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
 /**
- * Displays a simple pie chart
- *
- * @return {(JSX | null)}
- */
+* @function SimplePieChart
+* @description This function displays a pie chart representing the user's score data obtained from an API or data mocked
+* @returns {JSX.Element} JSX code representing the SimplePieChart component
+*/
 
 export default function SimplePieChart() {
+
+    /**
+     * @constant {[object]} data - represents the score data obtained from the API or data mocked
+     * @function setData - function used to set the score data
+     * @constant {string} id - represents the user's id obtained from the url
+     */
 
     const [data, setData] = useState([]);
     const { id } = useParams();
 
+    /**
+     * @function useEffect
+     * @description This function is executed when the component is mounted, it gets the score data for a user from the API or data mocked
+     * @returns {function} - returns the score data
+     */
+
     useEffect(() => {
         const data = async () => {
             const request = await getData("USER_MAIN_DATA", id);
-            if (!request) return alert('data error');
+            if (!request) return console.log("SimplePieChart's data was not call");
             // console.log(request)
             setData(request);
         };

@@ -7,9 +7,10 @@ import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
 
 /**
- * Displays a simple bar chart
- *
- * @return {(JSX | null)}
+ * Component to display a simple bar graph of a user's daily activity.
+ * @function
+ * @exports SimpleBarChart
+ * @default
  */
 
 export default function SimpleBarChart() {
@@ -17,10 +18,19 @@ export default function SimpleBarChart() {
   const [data, setData] = useState([]);
   const { id } = useParams();
 
+  /**
+   * Fetches the user's main data and sets it to state.
+   * @function
+   * @async
+   * @param {string} type - The type of data to recover, here "USER_ACTIVITY".
+   * @param {number} id - The user's id.
+   * @returns {void}
+   */
+
   useEffect(() => {
     const data = async () => {
       const request = await getData("USER_ACTIVITY", id);
-      if (!request) return alert('data error');
+      if (!request) return alert("Une erreur est survenue. Retournez à l'écran d'accueil s'il vous plaît.");
       setData(request);
     };
     data();
@@ -31,6 +41,14 @@ export default function SimpleBarChart() {
   for (let i = 0; i < data.sessions.length; i++) {
     data.sessions[i].day = i + 1;
   }
+
+  /**
+   * Custom component for tooltips display.
+   * @function
+   * @param {boolean} active - True if the tooltip is active, false otherwise.
+   * @param {object[]} payload - The data to be displayed in the tooltip.
+   * @returns {JSX.Element|null}
+   */
 
   const CustomTooltip = ({ active, payload }) => {
     if (active) {

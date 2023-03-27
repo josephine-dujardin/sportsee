@@ -7,20 +7,21 @@ import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
 
 /**
- * Displays a simple line chart
- *
- * @return {(JSX | null)}
- */
+* A simple line chart that displays the average length of user sessions by day of the week.
+* @returns {JSX.Element} Returns the JSX element that represents the simple line chart.
+*/
 
 export default function SimpleLineChart() {
 
     const [data, setData] = useState([]);
     const { id } = useParams();
 
+    // Fetches the data for the simple line chart from the mocked data / API and formats it for display.
+
     useEffect(() => {
         const data = async () => {
             const request = await getData("USER_AVERAGE_SESSIONS", id);
-            if (!request) return alert('data error');
+            if (!request) return console.log("SimpleLineChart's data was not call");
             const formatData = request.sessions.map((data) => {
                 switch (data.day) {
                     case 1:
@@ -46,6 +47,14 @@ export default function SimpleLineChart() {
         data();
     }, [id]);
     if (data.length === 0) return null;
+
+    /**
+    * A custom tooltip component that displays the value of the data point when the user hovers over it.
+    * @param {Object} props - The props passed to the custom tooltip component.
+    * @param {boolean} props.active - A boolean indicating whether the tooltip is active.
+    * @param {Array} props.payload - An array of objects containing the data for the tooltip.
+    * @returns {JSX.Element} Returns the JSX element that represents the custom tooltip.
+    */
 
     const CustomTooltip = ({ active, payload }) => {
         if (active) {

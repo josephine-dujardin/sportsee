@@ -1,12 +1,17 @@
+/**
+ * @fileoverview Component for displaying welcome text for a user
+ * @module WelcomeText
+ */
+
 import './welcome.css';
 import { getData } from '../../API/GetData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
 /**
- * Display user welcome text
- *
- * @return {(JSX | null)}
+ * Component for displaying welcome text for a user
+ * @function
+ * @returns {JSX.Element} WelcomeText component template
  */
 
 function WelcomeText() {
@@ -15,9 +20,15 @@ function WelcomeText() {
     const { id } = useParams();
 
     useEffect(() => {
+        /**
+        * Fetches user data and updates component state
+        * @async
+        * @function
+        * @returns {Promise<void>}
+        */
         const data = async () => {
             const request = await getData("USER_MAIN_DATA", id);
-            if (!request) return alert('data error');
+            if (!request) return console.log("WelcomeText's data was not call");
             setData(request.userInfos);
         };
         data();

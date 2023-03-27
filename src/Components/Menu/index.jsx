@@ -7,10 +7,10 @@ import DumbBell from '../../assets/iconDumbBell.svg'
 import './menu.css';
 
 /**
- * Displays a menu
- *
- * @return {(JSX )}
- */
+* A functional component that represents a menu containing horizontal and vertical menus with links and images.
+* @function
+* @returns {JSX.Element} A JSX.Element representing the menu component.
+*/
 
 function Menu() {
 

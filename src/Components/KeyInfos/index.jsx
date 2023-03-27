@@ -8,20 +8,26 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
 /**
- * Displays user's key infos
- *
- * @return {(JSX | null)}
- */
+* Displays key user data such as calorie count, protein count, carbohydrate count and lipid count.
+* @function
+* @returns {JSX.Element} - Key user data component
+*/
 
 function KeyInfos() {
 
     const [data, setData] = useState([]);
     const { id } = useParams();
 
+    /**
+    * Fetches the user's main data and sets it to state.
+    * @function
+    * @returns {void}
+    */
+
     useEffect(() => {
         const data = async () => {
             const request = await getData("USER_MAIN_DATA", id);
-            if (!request) return alert('data error');
+            if (!request) return console.log("KeyInfos's data was not call");
             setData(request.keyData);
         };
         data();

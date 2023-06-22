@@ -37,3 +37,23 @@
         margin-bottom: 0px;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .key-data {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .key-data {
+        grid-template-columns: auto;
+        margin-bottom: 50px;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 430px) {
+    .key-data {
+        margin-left: 70px;
+    }
+}

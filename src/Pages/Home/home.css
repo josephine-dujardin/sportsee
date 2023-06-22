@@ -2,3 +2,14 @@
     margin-left: 150px;
     margin-top: 150px;
 }
+
+.user-link {
+    text-decoration: none;
+    color: black;
+    width: 90px;
+    display: block;
+}
+
+.user-link:hover {
+    color: red;
+}

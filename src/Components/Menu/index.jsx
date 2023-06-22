@@ -20,19 +20,20 @@ function Menu() {
                 <Link to="/">
                     <img alt='logo' src={logo} className="logo" />
                 </Link>
-
-                <nav className="nav_banner">
-                    <NavLink to="/">Accueil</NavLink>
-                </nav>
-                <nav className="nav_banner">
-                    <p>Profil</p>
-                </nav>
-                <nav className="nav_banner">
-                    <p>Réglage</p>
-                </nav>
-                <nav className="nav_banner">
-                    <p>Communauté</p>
-                </nav>
+                <div className="nav_menu">
+                    <nav className="link_nav_banner">
+                        <NavLink to="/">Accueil</NavLink>
+                    </nav>
+                    <nav className="nav_banner">
+                        <p>Profil</p>
+                    </nav>
+                    <nav className="nav_banner">
+                        <p>Réglage</p>
+                    </nav>
+                    <nav className="nav_banner">
+                        <p>Communauté</p>
+                    </nav>
+                </div>
             </div>
             <div className="vertical_menu">
                 <div className="div_img">

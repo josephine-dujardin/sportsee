@@ -1,5 +1,6 @@
 .logo {
     height: 60px;
+    margin-left: 10px;
 }
 
 .horizontal_menu {
@@ -16,7 +17,11 @@
     top: 0;
 }
 
-.nav_banner {
+.nav_menu {
+    display: flex;
+}
+
+.nav_menu>nav {
     width: 200px;
     display: flex;
     justify-content: space-between;
@@ -25,7 +30,7 @@
     font-size: 20px;
 }
 
-.nav_banner a {
+.nav_menu>nav a {
     color: white;
     text-decoration: none;
 }
@@ -65,5 +70,27 @@
 @media screen and (max-width: 1280px) {
     .vertical_menu {
         width: 90px;
+    }
+}
+
+/* Responsive tablet */
+@media screen and (max-width: 930px) {
+    .nav_menu>nav {
+        width: 150px;
+    }
+
+    .nav_banner {
+        display: none !important;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 430px) {
+    .vertical_menu {
+        width: 70px;
+    }
+
+    .div_img {
+        width: 50px;
     }
 }
